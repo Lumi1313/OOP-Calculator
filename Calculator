@@ -1,0 +1,66 @@
+package oop;
+
+import java.util.Scanner;
+
+public class Calculator {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);	
+		
+		
+		int eleccion=0;
+		double num1, num2, respuesta;
+		
+			
+			while (eleccion<5) {
+			System.out.println("Escoge tu operacion:\n" +
+			"1: Suma\n" +
+			"2: Resta\n" +
+			"3: Multiplicacion\n" +
+			"4: Division\n" + 
+			"5: Apagar la calculadora");
+			eleccion = input.nextInt();	
+			
+			if (eleccion == 5)	{
+				System.out.println("\nApagando la calculadora");
+				System.exit(0);
+			}
+			
+			System.out.println("Ingresa el primer numero:");
+			num1 = input.nextDouble();
+			
+			
+			System.out.println("Ingresa el segundo numero:");
+			num2 = input.nextDouble();
+			
+			
+			switch (eleccion) {
+			case 1:
+				respuesta = num1 + num2;
+				System.out.println("\n"+num1+"+"+num2+"="+respuesta+"\n");
+				break;
+
+			case 2:
+				respuesta = num1 - num2;
+				System.out.println("\n"+num1+"-"+num2+"="+respuesta+"\n");
+				break;
+
+			case 3:
+				respuesta = num1 * num2;
+				System.out.println("\n"+num1+"*"+num2+"="+respuesta + "\n");
+				break;
+
+			case 4:
+				respuesta =num1/num2;
+				System.out.println("\n"+num1+"/"+num2+"="+respuesta+"\n");
+				break;
+
+			default:	
+				System.out.println("Input invalido. Ingrese un numero del 1 al 5.");
+				return;
+
+			}
+		}
+	}
+	
+	
+	}
